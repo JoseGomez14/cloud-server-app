@@ -2,8 +2,6 @@ FROM node:lts-alpine AS build
 WORKDIR /app
 COPY . .
 
-RUN echo "PUBLIC_INSTANCE_ID=103345345345" > .env
-
 RUN npm i
 RUN npm run build
 
